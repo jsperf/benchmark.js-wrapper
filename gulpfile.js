@@ -76,7 +76,10 @@ gulp.task('assets', function() {
 	.pipe(replace('<script src="../../node_modules/platform/platform.js"></script>', ''))
 	.pipe(replace('<script src="../../benchmark.js"></script>', ''))
 	.pipe(replace('<script src="ui.js"></script>', ''))
-	.pipe(replace('<script src="../../plugin/ui.browserscope.js"></script>', ''))
+	.pipe(replace(
+		'<script src="../../plugin/ui.browserscope.js"></script>',
+		'<script src="all.js"></script>'
+	))
 	.pipe(gulp.dest('./dist'));
 });
 
