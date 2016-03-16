@@ -30,9 +30,7 @@ gulp.task('js', function() {
 	)
 
 	// Use whatever version of lodash Benchmark.js is using.
-	.pipe(addSrc.prepend(
-		'node_modules/benchmark/node_modules/lodash/lodash.js'
-	))
+	.pipe(addSrc.prepend(require.resolve('lodash')))
 
 	.pipe(concat('all.js'))
 
