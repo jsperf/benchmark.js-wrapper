@@ -53,6 +53,14 @@ gulp.task('js', function() {
 		'(function(){var _,platform;',
 		'}.call(this))'
 	))
+    .pipe(replace('root.platform = parse()', 'platform = parse()'))
+    .pipe(replace('var _ = runInContext()', '_ = runInContext()'))
+    .pipe(replace('(freeWindow || freeSelf || {})._ = _', ''))
+    .pipe(replace('root._ = _', ''))
+
+    // Ensure that Benchmark.js uses the local copies of lodash and Platform.js.
+    .pipe(replace('var _ = context && context._ || req(\'lodash\') || root._;', ''))
+    .pipe(replace('\'platform\': context.platform', '\'platform\': platform'))
 
 	// Minify the result.
 	//.pipe(uglify())
