@@ -63,7 +63,7 @@ gulp.task('js', function() {
 	.pipe(replace('\'platform\': context.platform', '\'platform\': platform'))
 
 	// Minify the result.
-	//.pipe(uglify())
+	.pipe(uglify())
 
 	.pipe(gulp.dest('./dist/'));
 });
