@@ -1,5 +1,22 @@
 {
-  "private": true,
+  "name": "benchmark.js-wrapper-jsperf",
+  "version": "0.0.0",
+  "description": "The special jsPerf-specific build of Benchmark.js.",
+  "main": "dist/all.js",
+  "files": [
+    "LICENSE-MIT.txt",
+    "dist/all.js"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Mathias Bynens",
+    "url": "https://mathiasbynens.be/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsperf/benchmark.js-wrapper.git"
+  },
+  "bugs": "https://github.com/jsperf/benchmark.js-wrapper/issues",
   "devDependencies": {
     "@alrra/travis-scripts": "^2.0.0",
     "benchmark": "2.1.0",
@@ -12,7 +29,8 @@
     "gulp-uglify": "^1.5.1"
   },
   "scripts": {
-    "test": "gulp",
-    "build": "gulp"
+    "build": "gulp",
+    "prepublish": "gulp",
+    "test": "gulp"
   }
 }
