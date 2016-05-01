@@ -1,8 +1,8 @@
-# Benchmark.js wrapper for jsPerf [![Build status](https://travis-ci.org/jsperf/build-benchmark.js-wrapper.svg)](https://travis-ci.org/jsperf/build-benchmark.js-wrapper)
+# Benchmark.js wrapper for jsPerf [![Build status](https://travis-ci.org/jsperf/benchmark.js-wrapper.svg)](https://travis-ci.org/jsperf/benchmark.js-wrapper)
 
 This repository hosts scripts that generate the special jsPerf-specific build of Benchmark.js.
 
-Demo / test page: <https://jsperf.github.io/build-benchmark.js-wrapper/>
+Demo / test page: <https://jsperf.github.io/benchmark.js-wrapper/>
 
 ## Why does jsPerf need a special build?
 

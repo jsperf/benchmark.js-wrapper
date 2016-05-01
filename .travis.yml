@@ -2,8 +2,8 @@ env:
   global:
     secure: tda2UN8Wif3bVBGJD5UJaXRhsE0E+bz/kZ+qudJp6LpCeb4RpV50kTIzDWEGjHF0Lubi/9xV0nGz+EvzcOWlDgdcBIMrVG38BgTSVtGyAsyeDPdO6K7wmFs5NyC/g7L0JBM7axjBeydYkRei/mmd1SJyvfLssFKHSYXfB2RZSRnnGDEEHNRuWmTQ1xCZap8upHUL3r67WrvRCl+o8MsBH2yFfTQD1BT3Di7StNwS1IH9/mLUzIPjx61hq8VBjF8kAzR1DOB0Mk3ll68tZ2gVhg80t3qe/ulSpJ0ox9IuHzLn2uEUdQR2frcoVLMCiqahZxitwBLncmgSoNgrr9+KVR65tjRfBrudElg//4Pi9enarOoGNXjDAi0dmlel7ayD0cpHmUPi4fGsQEzJw0HAIw/3VK6+Co3jt6uPssfAmW/VQbhGmV6POqM/opKJg4s78fgf4DvDbDPcl9d8mXelnc04SzbK3+AqndeuDKm29dvxQDDa/Hl7VUuyzft1CXr5+bgug6ZLw5n6xaF/zzPcGai4Hh4kGCM0jISbb75DRGt/m2BD4LtEgDCe08eDuSqU2YQpXzrowFLd6LkwtWofcLCIEkXcgusiJTmb0+bhDESqLvxaVTtd3A+pHzcptugHvLuA9CzJ15YPGg2czl+PVkrcVjYR+J/KbM5VsmQ9gv0=
 after_success:
-  - $(npm bin)/set-up-ssh -k "${encrypted_fa862907f31d_key}"
-      -iv "${encrypted_fa862907f31d_iv}"
+  - $(npm bin)/set-up-ssh --key "${encrypted_fa862907f31d_key}"
+      --iv "${encrypted_fa862907f31d_iv}"
       --path-encrypted-key .travis-github-deploy-key.enc
   - $(npm bin)/update-branch --commands 'npm run build'
       --commit-message "Update gh-pages @ ${TRAVIS_COMMIT}"
