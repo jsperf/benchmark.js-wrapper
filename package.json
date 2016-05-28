@@ -1,6 +1,6 @@
 {
   "name": "@mathias/benchmark.js-wrapper-jsperf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The special jsPerf-specific build of Benchmark.js.",
   "main": "dist/all.js",
   "files": [
