@@ -19,7 +19,7 @@
   "bugs": "https://github.com/jsperf/benchmark.js-wrapper/issues",
   "devDependencies": {
     "@alrra/travis-scripts": "^3.0.1",
-    "benchmark": "2.1.0",
+    "benchmark": "2.1.1",
     "gulp": "^3.9.0",
     "gulp-add-src": "^0.2.0",
     "gulp-concat": "^2.6.0",
