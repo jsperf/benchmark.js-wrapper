@@ -55,6 +55,7 @@ gulp.task('js', function() {
 	))
 	.pipe(replace('root.platform = parse()', 'platform = parse()'))
 	.pipe(replace('var _ = runInContext()', '_ = runInContext()'))
+	.pipe(replace('var _ = context && context._ || require(\'lodash\') || root._;', ''))
 	.pipe(replace('(freeWindow || freeSelf || {})._ = _', ''))
 	.pipe(replace('root._ = _', ''))
 
@@ -78,7 +79,7 @@ gulp.task('assets', function() {
 			'requestOptions': requestOptions
 		}
 	)
-	.pipe(replace('<script src="../../node_modules/lodash/index.js"></script>', ''))
+	.pipe(replace('<script src="../../node_modules/lodash/lodash.js"></script>', ''))
 	.pipe(replace('<script src="../../node_modules/platform/platform.js"></script>', ''))
 	.pipe(replace('<script src="../../benchmark.js"></script>', ''))
 	.pipe(replace('<script src="ui.js"></script>', ''))
